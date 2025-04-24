@@ -1,20 +1,23 @@
 console.log("Hello World")
 console.log(" ")
 
-const person = 
-`{
-    "firstName": "Biruk",
-    "lastName": "Yidnekachew",
-    "course": "WEB115",
-    "section": "2816",
-    "role": "students"
-}`
+document.getElementById('button').addEventListener("click", () => {
 
-console.log("Person object:")
-const personParse = JSON.parse(person)
-console.log(personParse)
+    const person = 
+    `{
+        "firstName": "${document.getElementById('firstName').value}",
+        "lastName": "${document.getElementById('lastName').value}",
+        "course": "${document.getElementById('course').value}",
+        "section": "${document.getElementById('section').value}",
+        "role": "${document.getElementById('role').value}"
+    }`
 
-console.log(" ")
+    console.log("Person object:")
+    const personParse = JSON.parse(person)
+    console.log(personParse)
 
-console.log("JSON Format:")
-console.log(person)
+    console.log(" ")
+
+    console.log("JSON Format:")
+    console.log(person)
+})
